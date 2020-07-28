@@ -1,7 +1,9 @@
 class TripsController < ApplicationController
     
+    def new
+    end
+    
     def update
-        
     end
 
     private
