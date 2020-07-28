@@ -16,5 +16,6 @@
     min-width: 20%;
 }
 #user-photo{
-    
+    height: 100px;
+    width: 100px;
 }
