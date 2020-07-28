@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
     
+    def new
+
+    end
+
+    def update
+    end
 
     private
     def strong_params

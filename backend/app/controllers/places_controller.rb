@@ -2,6 +2,7 @@ class PlacesController < ApplicationController
     
     
     def update
+        
     end
 
     private

@@ -1,6 +1,8 @@
 class TripsController < ApplicationController
     
-
+    def update
+        
+    end
 
     private
     def strong_params
