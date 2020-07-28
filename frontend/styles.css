@@ -1,0 +1,17 @@
+.user-section{
+    position: relative;
+    float: left;
+    min-width: 20%;
+}
+.location-section{
+    position: relative;
+    float: left;
+    max-width: 55%;
+    min-width: 55%;
+    text-align: center;
+}
+.all-location-section{
+    position: relative;
+    float: right;
+    min-width: 20%;
+}
