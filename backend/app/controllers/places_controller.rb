@@ -1,6 +1,9 @@
 class PlacesController < ApplicationController
     
     
+    def new
+    end
+    
     def update
         
     end
