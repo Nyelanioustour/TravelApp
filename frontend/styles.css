@@ -1,9 +1,9 @@
-.user-section{
+#user-section{
     position: relative;
     float: left;
     min-width: 20%;
 }
-.location-section{
+#location-section{
     position: relative;
     float: left;
     max-width: 55%;
@@ -15,7 +15,7 @@
     float: right;
     min-width: 20%;
 }
-.log-in-form{
+#log-in-form{
     max-width: 200px;
     margin: 10px;
     position: relative;
@@ -29,4 +29,12 @@
 }
 .carousel-inner .carousel-item a img {
     max-height: 400px;
+}
+.carousel{
+    float: left;
+}
+.d-block{
+    max-width: 500px;
+    max-height: 500px;
+    min-height: 500px;
 }

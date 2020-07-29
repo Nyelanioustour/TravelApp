@@ -4,10 +4,16 @@ document.addEventListener("DOMContentLoaded",event=>{
 
     getUserData()
     getPlaceData()
-    console.log(document.querySelector('#log-in-button'))
-    document.querySelector('#log-in-button').addEventListener('click', event=>{
-        console.log(event.target)
-    })
+    logInHandler()
+
+    function logInHandler(){
+        let loginButton = document.querySelector('#log-in-button')
+        loginButton.addEventListener('click', event=>{
+            let form = document.querySelector('#log-in-form')
+            form.classList = "active"
+            console.log(form)
+        })
+    }
 
 
     function getUserData(){
