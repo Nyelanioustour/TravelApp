@@ -1,5 +1,9 @@
 class TripsController < ApplicationController
-    
+    def index
+        trips = Trip.all 
+        render json: trips, :include => [:user,:place]
+    end
+
     def new
     end
     

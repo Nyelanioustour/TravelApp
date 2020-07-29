@@ -1,19 +1,24 @@
 #user-section{
     position: relative;
     float: left;
+    max-width: 20%;
     min-width: 20%;
 }
 #location-section{
     position: relative;
     float: left;
-    max-width: 55%;
-    min-width: 55%;
-    text-align: center;
+    left: 100px;
+    max-width: 40%;
+    min-width: 40%;
 }
-.all-location-section{
+#all-location-section{
     position: relative;
     float: right;
-    min-width: 20%;
+    max-width: 20%;
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
 #log-in-form{
     max-width: 200px;
@@ -31,10 +36,10 @@
     max-height: 400px;
 }
 .carousel{
-    float: left;
+    position: relative;
 }
 .d-block{
-    max-width: 500px;
+    max-width: 100%;
     max-height: 500px;
     min-height: 500px;
 }
