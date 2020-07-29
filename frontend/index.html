@@ -77,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div id="user-itinerary">
                         <h5>User Itinerary</h5>
                     </div>
                 </section>
@@ -88,16 +88,8 @@
                     </div>
                     <div>
                         <div id="main-carousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/wnc-entrance.jpg" alt="First slide" height="100" width="100">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/wnc-inside.jpg" alt="Second slide" height="100" width="100">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/wnc-northside.jpg" alt="Third slide" height="100" width="100">
-                            </div>
+                            <div class="carousel-inner" id="carousel-photos">
+                          
                             </div>
 
                             <a class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
@@ -123,9 +115,12 @@
                 </section>
             </section>
             <div id="location-description">
-                <p>This is where the location description goes</p>
+                <!-- This is where the description goes -->
             </div>
-            
+            <div class="buttons hide" id="itinerary-button-div">
+                <button class="button is-success" id="add-itinerary-button">Add To Itinerary</button>
+            </div>
+            <hr>
         </main>
     </body>
     

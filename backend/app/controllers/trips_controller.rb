@@ -4,7 +4,8 @@ class TripsController < ApplicationController
         render json: trips, :include => [:user,:place]
     end
 
-    def new
+    def create
+        Trip.create(strong_params())
     end
     
     def update
