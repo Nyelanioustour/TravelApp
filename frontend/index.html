@@ -25,10 +25,6 @@
                             <h5>Travel App</h5>
                         </a>
                         
-                        <a class="navbar-item">
-                            <h5>Log In</h5>
-                        </a>
-                        
                         <div class="navbar-item has-dropdown is-hoverable" style="color: black;">
                             <a class="navbar-link">
                                 <h5>City Select</h5>
@@ -52,7 +48,7 @@
                                 <a class="button is-success">
                                     <strong>Sign up</strong>
                                 </a>
-                                <a class="button is-success">
+                                <a class="button is-success" id="log-in-button">
                                     <strong>Log In</strong> 
                                 </a>
                             </div>
@@ -64,6 +60,11 @@
         </header>
         
         <main>
+            <section>
+                <div class="hide" id="log-in-form">
+                    <p> UserName: </p><input type="text"> <button>Log In</button>
+                </div>
+            </section>
             <section class="user-section">
                 <div>
                     <div id="user-photo">
@@ -78,7 +79,7 @@
                     <h5>User Itinerary</h5>
                 </div>
             </section>
-            <section class="location-section">
+            <section id="location-section">
                 <div>
                     <h5>THIS IS THE location-section</h5>
                 </div>

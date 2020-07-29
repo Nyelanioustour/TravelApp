@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+photo_array = ["/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/cloud.jpg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/DK.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/geralt.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/jack.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/kratos.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/link.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/mario.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/pika.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/ryu.png"]
+
 10.times do
-    User.create(name:Faker::Name.name ,email: Faker::Internet.email)
+    User.create(name:Faker::Name.name ,email: Faker::Internet.email,user_image:photo_array.sample)
 end
 
 #below are the seeds for DC Places
