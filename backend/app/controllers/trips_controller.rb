@@ -9,7 +9,7 @@ class TripsController < ApplicationController
     end
 
     def create
-        trip = Trip.create(strong_params())
+        trip = Trip.create(user_id:params[:trip][:user_id],place_id:params[:trip][:place_id])
         render json: trip
     end
     

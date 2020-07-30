@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",event=>{
     getPlaceData()
     logInHandler()
     signupHandler()
-
+    setDefaultSelection()
         
         document.querySelector('#add-itinerary-button').addEventListener('click', event=>{
             let place_id = currentPlace.id
@@ -29,10 +29,13 @@ document.addEventListener("DOMContentLoaded",event=>{
                 body: JSON.stringify({ trip })
             })
             .then(response=>response.json())
-            .then(console.log)
-        })
+            .then(updateItinerary(currentPlace))
 
-        // }
+        })
+        function setDefaultSelection(){
+            fetch(PLACES_URL).then(response=>response.json()).then(places=>renderPlace(places[0]))
+        }
+
         function signupHandler(){
             let signupButton = document.querySelector('#sign-up-button')
             let form = document.querySelector('#sign-up-form')
@@ -117,21 +120,21 @@ document.addEventListener("DOMContentLoaded",event=>{
             document.querySelector('#user-photo').src = `${user.user_image}`
             document.querySelector('#user-info').innerHTML = `<h5>${user.name}</h5><h7>Email: ${user.email}</h7><hr>`
             renderUserItinerary(user)
-            currentUser = user
-
         })
     }
 
     function renderUserItinerary(user){
+        document.querySelector('#user-itinerary').innerHTML=""
         fetch(TRIPS_URL).then(response=>response.json()).then(trips=>{
             trips.forEach(trip=>{
                 if (trip.user.name === user.name){
                     let div = document.createElement('div')
+                    let p = document.createElement('p')
                     let hr = document.createElement('hr')
-                    document.querySelector('#user-itinerary').append(hr)
-                    div.innerText = `${trip.place.name}`
-                    div.classList ="mask rgba-red-strong"
+                    p.innerText = `${trip.place.name}`
+                    div.append(p)
                     document.querySelector('#user-itinerary').append(div)
+                    document.querySelector('#user-itinerary').append(hr)
                     div.addEventListener('click', event=>{
                         renderPlace(trip.place)
                     })
@@ -201,7 +204,22 @@ document.addEventListener("DOMContentLoaded",event=>{
             div.addEventListener('click', event=>{
                 renderPlace(place)
             })
-
+            
         });
+    }
+    
+    function updateItinerary(place){
+        let div = document.createElement('div')
+        let p = document.createElement('p')
+        let hr = document.createElement('hr')
+        p.textContent = `${place.name}`
+        div.append(p)
+        div.append(hr)
+        document.querySelector('#user-itinerary').append(div)
+        div.addEventListener('click', event=>{
+            renderPlace(place)
+        })
+
+
     }
 })
