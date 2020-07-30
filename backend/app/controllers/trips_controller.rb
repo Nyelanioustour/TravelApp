@@ -4,8 +4,13 @@ class TripsController < ApplicationController
         render json: trips, :include => [:user,:place]
     end
 
+    def show
+        trip = Trip.find(params[:id])
+    end
+
     def create
-        Trip.create(strong_params())
+        trip = Trip.create(strong_params())
+        render json: trip
     end
     
     def update
@@ -13,7 +18,7 @@ class TripsController < ApplicationController
 
     private
     def strong_params
-        params.require(:trips).permit(:user_id, :place_id)
+        params.require(:trip).permit(:user_id, :place_id)
     end
 
 end

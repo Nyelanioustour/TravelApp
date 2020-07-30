@@ -7,6 +7,35 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 photo_array = ["/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/cloud.jpg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/DK.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/geralt.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/jack.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/kratos.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/link.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/mario.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/pika.jpeg","/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/User_photos/ryu.png"]
+place_photo_array = [
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/930-bandshot.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/930-Club-barshot.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/930-overshot.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/anc-graves.jpeg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/anc-wideshot.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/anc-flagplant.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/jfk inside.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/jfk kennedy-center-seating.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/jfk kennedycenterrainbow.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/Lincoln-statue-web.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/lm-inscription.jpeg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/lm-outside.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/na-exhibit.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/na-inside.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/na-outside.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/pg-exhibit.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/pg-inside.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/pg-outside.jpeg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/szo-aquarium.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/szoo-entrance.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/szoo-exhibit.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/tb-cherryblossums.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/tb-monument.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/tb-outside.webp",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/wnc-entrance.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/wnc-inside.jpg",
+    "/Users/shawnalexander/Flatiron/code/TravelApp/backend/app/assets/images/wnc-northside.jpg"
+]
 
 10.times do
     User.create(name:Faker::Name.name ,email: Faker::Internet.email,user_image:photo_array.sample)
@@ -48,4 +77,9 @@ If you love history, you'll enjoy visiting this museum. Reserving free passes on
 
 10.times do
     Trip.create(user_id:rand(1..10), place_id:rand(1..10))
+end
+count = 0
+while count < place_photo_array.length do
+    Photo.create(img_url:place_photo_array[count])
+    count +=1 
 end

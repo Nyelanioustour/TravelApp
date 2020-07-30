@@ -45,7 +45,7 @@
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                                <a class="button is-success">
+                                <a class="button is-success" id='sign-up-button'>
                                     <strong>Sign up</strong>
                                 </a>
                                 <a class="button is-success" id="log-in-button">
@@ -63,7 +63,14 @@
             <section style="overflow: hidden;">
                 <section>
                     <div class="hide" id="log-in-form">
-                        <p> UserName: </p><input type="text" id="user-name"> <button class="is-button" id="login-submit">Log In</button>
+                        <p> UserName: </p><input type="text" id="user-name"> <button class="button is-success" id="login-submit">Log In</button>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="hide" id="sign-up-form">
+                        <p> UserName: </p><input type="text" id="new-user-name"> 
+                        <p> email: </p><input type="text" id="new-user-email"> <button class="button is-success" id="create-account-submit">Create Account</button><button class="button is-success" id="cancel-account-submit">Cancel</button>
                     </div>
                 </section>
 
@@ -84,9 +91,6 @@
 
                 <section id="location-section">
                     <div>
-                        <h5>THIS IS THE location-section</h5>
-                    </div>
-                    <div>
                         <div id="main-carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" id="carousel-photos">
                           
@@ -103,13 +107,15 @@
                             </a>
 
                         </div>
-
+                    </div>
+                    <div class="hide">
+                        <input type="number" id="photo-id-field">photo<input type="number" id="place-id-field">place<button class="button is-success" id='add-photo-button'>submit</button>
                     </div>
                     <br>
                 </section>
                 <section id="all-location-section">
                     <div>
-                        <h8>Select From the Available Locations:</h8>
+                        <strong><h8>Select Location:</h8></strong>
                         <hr>
                     </div>
                 </section>
