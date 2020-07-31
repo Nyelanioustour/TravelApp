@@ -14,6 +14,6 @@ class PhotosController < ApplicationController
 
     private
     def strong_params
-        params.require(:photos).permit(:img_url)
+        params.require(:photo).permit(:img_url)
     end
 end

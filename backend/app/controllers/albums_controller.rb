@@ -10,7 +10,6 @@ class AlbumsController < ApplicationController
     end
 
     def create
-        byebug
         album = Album.create(strong_params())
         render json: album
     end

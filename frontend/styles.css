@@ -1,5 +1,20 @@
-p:hover{
+.hoverable:hover{
     font-weight: bold;
+}
+#add-itinerary-button{
+    left: 42%;
+}
+#place-description-field{
+    height:100px;
+    word-wrap: normal;
+}
+#place-name-field{
+    width:300px;
+    word-wrap: normal;
+}
+#place-city-field{
+    width:300px;
+    word-wrap: normal;
 }
 #user-section{
     position: relative;

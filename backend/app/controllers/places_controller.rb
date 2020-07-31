@@ -5,7 +5,9 @@ class PlacesController < ApplicationController
         render json: places, :include => :photos
     end
     
-    def new
+    def create
+        place = Place.create(strong_params())
+        render json: place
     end
     
     def update
